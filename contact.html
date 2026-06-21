@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Plantexterity</title>
+  <meta name="description" content="Get in touch with Plantexterity for products, training, academic support, services, and collaboration." />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="logo">🌿</span> Plantexterity</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="academic.html">Academic</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Contact</p>
+        <h1>Get in Touch</h1>
+        <p class="lead">Questions about products, training, services, or collaboration? Send us a message.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Form. action="REPLACE_ME": swap for your Formspree/Netlify endpoint (see README).
+               Until then, main.js opens the visitor's email app as a fallback. -->
+          <form id="contact-form" action="REPLACE_ME" method="POST" novalidate>
+            <h2 class="mt0">Send a message</h2>
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+            <div class="form-field">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject">
+                <option>General inquiry</option>
+                <option>Product inquiry</option>
+                <option>Bulk order inquiry</option>
+                <option>Training registration</option>
+                <option>Academic support inquiry</option>
+                <option>Services inquiry</option>
+                <option>Research collaboration</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button class="btn" type="submit">Send message</button>
+            <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+          </form>
+
+          <!-- Contact info + map -->
+          <div class="contact-info">
+            <h2 class="mt0">Reach us</h2>
+            <p>📧 <strong>Email:</strong><br /><a href="mailto:REPLACE_EMAIL">REPLACE_EMAIL</a></p>
+            <p>📱 <strong>Phone:</strong><br />REPLACE_PHONE</p>
+            <p>📍 <strong>Location:</strong><br />REPLACE_ADDRESS</p>
+            <a class="btn wa-btn" href="https://wa.me/REPLACE_PHONE" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+
+            <div class="map-embed" style="margin-top:20px">
+              <!-- Replace this block with your Google Maps embed iframe (see README). -->
+              🗺️ Google Map embed goes here
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="color:#fff"><span class="logo">🌿</span> Plantexterity</a>
+        <p style="margin-top:12px;max-width:340px">Sustainable aquaculture &amp; biotechnology solutions — from research to application.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="academic.html">Academic Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>📧 <a href="mailto:REPLACE_EMAIL">REPLACE_EMAIL</a></li>
+          <li>📱 REPLACE_PHONE</li>
+          <li>📍 REPLACE_ADDRESS</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container disclaimer">
+      <p><strong>Disclaimer:</strong> Products are for research and aquaculture purposes only. Academic support does not include unethical practices.</p>
+      <p>© <span id="year">2026</span> Plantexterity. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
