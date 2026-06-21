@@ -54,6 +54,14 @@ In `gallery.html`, replace each `<div class="tile">…</div>` with:
 ```
 Put image files in `assets/img/`.
 
+## Home-page placeholder content
+The redesigned home page (modeled on a modern lab site) has placeholder content to update:
+- **Stats counters** (`data-to` values in `index.html`) — set real years/projects/trainees/clients.
+- **Testimonials carousel** — replace the placeholder quotes with real ones.
+- **FAQ** — edit questions/answers as needed.
+- **Social links** — footer social icons (`class="socials"`) currently point to `#`; set your real Instagram/Facebook/YouTube/LinkedIn URLs (in every page footer).
+- **Newsletter form** — currently inert (`onsubmit="return false"`); wire to your mailing-list provider if wanted.
+
 ## Changing colors
 All theme colors are CSS variables at the top of `assets/css/styles.css` (`:root { … }`).
 Change `--green`, `--teal`, etc. in one place to retheme the whole site.
