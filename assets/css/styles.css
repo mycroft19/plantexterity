@@ -53,6 +53,10 @@ p { margin: 0 0 1rem; }
   background: linear-gradient(135deg, var(--green), var(--teal));
   display: grid; place-items: center; color: #fff; font-size: 1.2rem;
 }
+.brand-logo { height: 48px; width: auto; display: block; }
+@media (max-width: 480px) { .brand-logo { height: 40px; } }
+.footer-logo { display: inline-block; background: #fff; padding: 10px 14px; border-radius: 14px; }
+.footer-logo img { height: 44px; width: auto; display: block; }
 .nav-right { display: flex; align-items: center; gap: 10px; flex-wrap: nowrap; }
 .nav-links { display: flex; align-items: center; gap: 1px; list-style: none; margin: 0; padding: 0;
   flex-wrap: nowrap; white-space: nowrap; }
