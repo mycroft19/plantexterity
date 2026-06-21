@@ -175,7 +175,13 @@ p { margin: 0 0 1rem; }
 }
 .media-card .thumb.v2 { background: linear-gradient(135deg, #d9efd0, #bfe6d6); }
 .media-card .thumb.v3 { background: linear-gradient(135deg, #cdeae6, #d8efd5); }
+.media-card img.thumb { width: 100%; object-fit: cover; }
 .media-card .body { padding: 22px 24px 26px; }
+
+/* Split section: image beside text (TiCi-style) */
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+@media (max-width: 820px) { .split { grid-template-columns: 1fr; gap: 28px; } }
+.split img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-lg); aspect-ratio: 4/3; object-fit: cover; }
 
 /* ---------- Notes / callouts ---------- */
 .note { background: #fff7e6; border: 1px solid #f2dca6; border-radius: 14px; padding: 18px 20px; color: #6b5410; }
