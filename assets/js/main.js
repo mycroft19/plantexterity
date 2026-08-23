@@ -1,4 +1,4 @@
-/* Plantexterity — shared client-side behavior. No dependencies. */
+/* FloraCulture Research Lab — shared client-side behavior. No dependencies. */
 (function () {
   "use strict";
 
@@ -53,7 +53,7 @@
         );
         msg.textContent = "Opening your email app… (set up a form endpoint to receive these on the site).";
         msg.style.color = "var(--green-dark)";
-        window.location.href = "mailto:REPLACE_EMAIL?subject=" + subj + "&body=" + body;
+        window.location.href = "mailto:floracultureresearchlab@gmail.com?subject=" + subj + "&body=" + body;
       }
       // else: real action present -> normal submit proceeds
     });

@@ -1,6 +1,6 @@
-# Plantexterity — Lab Website
+# FloraCulture Research Lab — Lab Website
 
-Static multi-page website for **Plantexterity** — Integrated Plant Production & Aquaculture Lab.
+Static multi-page website for **FloraCulture Research Lab** — Integrated Plant Production & Aquaculture Lab.
 No build step, no framework. Just HTML, CSS, and a small JS file. Open `index.html` to view.
 
 ## Pages
