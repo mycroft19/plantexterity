@@ -327,12 +327,13 @@ p { margin: 0 0 1rem; }
 
 /* ---------- Hero slider (home page) ---------- */
 .hero-slider { position: relative; overflow: hidden; background: var(--green-dark); }
-.hero-slider .slides { position: relative; height: clamp(420px, 62vh, 620px); }
-.hero-slide {
-  position: absolute; inset: 0; opacity: 0; transition: opacity .9s ease;
-  pointer-events: none;
+/* Track slides sideways: the whole strip shifts by one slide width. */
+.hero-slider .slides {
+  display: flex; height: clamp(420px, 62vh, 620px);
+  transition: transform .62s cubic-bezier(.45, .05, .25, 1);
+  will-change: transform;
 }
-.hero-slide.is-active { opacity: 1; pointer-events: auto; }
+.hero-slide { position: relative; flex: 0 0 100%; width: 100%; height: 100%; }
 .hero-slide img { width: 100%; height: 100%; object-fit: cover; }
 .hero-slide::after {
   content: ""; position: absolute; inset: 0;
@@ -382,4 +383,4 @@ p { margin: 0 0 1rem; }
   .hero-slider .slider-nav.prev { left: 8px; }
   .hero-slider .slider-nav.next { right: 8px; }
 }
-@media (prefers-reduced-motion: reduce) { .hero-slide { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .hero-slider .slides { transition: none; } }

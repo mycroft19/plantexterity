@@ -1,6 +1,2 @@
-# OS / editor cruft
-.DS_Store
-Thumbs.db
-*.swp
-.vscode/
-.idea/
+# Source images dropped in the repo root — optimized copies live in assets/img/
+/*.jpeg

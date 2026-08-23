@@ -122,8 +122,10 @@
     var DELAY = 5000;
     var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+    var strip = slider.querySelector(".slides");
     function show(n) {
       idx = (n + slides.length) % slides.length;
+      strip.style.transform = "translateX(" + (-idx * 100) + "%)";
       slides.forEach(function (el, i) { el.classList.toggle("is-active", i === idx); });
       dots.forEach(function (d, i) { d.setAttribute("aria-current", i === idx ? "true" : "false"); });
     }
