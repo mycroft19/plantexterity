@@ -112,4 +112,52 @@
     if (prev) prev.addEventListener("click", function () { scrollBy(-1); });
     if (next) next.addEventListener("click", function () { scrollBy(1); });
   }
+
+  // Hero slider (home page): autoplay + arrows + dots, pauses on hover/focus/tab-hidden.
+  var slider = document.querySelector(".hero-slider");
+  if (slider) {
+    var slides = [].slice.call(slider.querySelectorAll(".hero-slide"));
+    var dots = [].slice.call(slider.querySelectorAll(".slider-dots button"));
+    var idx = 0, timer = null;
+    var DELAY = 5000;
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function show(n) {
+      idx = (n + slides.length) % slides.length;
+      slides.forEach(function (el, i) { el.classList.toggle("is-active", i === idx); });
+      dots.forEach(function (d, i) { d.setAttribute("aria-current", i === idx ? "true" : "false"); });
+    }
+    function step(dir) { show(idx + dir); }
+    function start() { if (!reduce && !timer) timer = setInterval(function () { step(1); }, DELAY); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    function restart() { stop(); start(); }
+
+    var p = slider.querySelector(".slider-nav.prev");
+    var n = slider.querySelector(".slider-nav.next");
+    if (p) p.addEventListener("click", function () { step(-1); restart(); });
+    if (n) n.addEventListener("click", function () { step(1); restart(); });
+    dots.forEach(function (d) {
+      d.addEventListener("click", function () { show(+d.getAttribute("data-goto")); restart(); });
+    });
+
+    slider.addEventListener("mouseenter", stop);
+    slider.addEventListener("mouseleave", start);
+    slider.addEventListener("focusin", stop);
+    slider.addEventListener("focusout", start);
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) { stop(); } else { start(); }
+    });
+
+    // Swipe on touch devices.
+    var x0 = null;
+    slider.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; stop(); }, { passive: true });
+    slider.addEventListener("touchend", function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1);
+      x0 = null; start();
+    }, { passive: true });
+
+    start();
+  }
 })();

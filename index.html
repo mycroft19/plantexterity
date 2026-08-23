@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FloraCulture Research Lab — Built on Nature. Driven by Science.</title>
   <meta name="description" content="Integrated Plant Production & Aquaculture Lab — sustainable solutions through plant tissue culture, aquaculture, and algal biotechnology. Research, training, and biological products." />
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/img/favicon-64.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
@@ -13,7 +14,13 @@
 
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="index.html"><img class="brand-logo" src="assets/img/logo-header.png" alt="FloraCulture Research Lab" /></a>
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/img/logo-mark.png" alt="" />
+        <span class="brand-text">
+          <span class="bt-name">Flora<em>Culture</em></span>
+          <span class="bt-sub">Research Lab</span>
+        </span>
+      </a>
       <div class="nav-right">
         <ul class="nav-links" id="nav-links">
           <li><a class="active" href="index.html">Home</a></li>
@@ -33,21 +40,67 @@
   </header>
 
   <main id="main">
-    <!-- Hero -->
-    <section class="hero photo">
-      <div class="container">
-        <p class="eyebrow">Integrated Plant Production &amp; Aquaculture Lab</p>
-        <h1>Built on Nature. Driven by Science. Focused on the Future.</h1>
-        <p class="lead">Advancing sustainable solutions through research, training, and biological products — across plant tissue culture, aquaculture, and algal biotechnology.</p>
-        <div class="pill-row">
-          <span class="pill">🌱 Plant Tissue Culture</span>
-          <span class="pill">🐟 Aquaculture · Fish · Shrimp · Lobster</span>
-          <span class="pill">🌊 Microalgae &amp; Macroalgae</span>
+    <!-- Hero slider -->
+    <section class="hero-slider" aria-label="Plants from our lab" aria-roledescription="carousel">
+      <div class="slides">
+        <div class="hero-slide is-active" data-slide="0">
+          <img src="assets/img/plant-drosera-adelae.jpg" alt="Drosera adelae — Lance-leaved sundew" fetchpriority="high" />
+          <div class="slide-caption container">
+            <p class="common">Lance-leaved sundew</p>
+            <h2 class="sci">Drosera adelae</h2>
+            <p class="slide-note">Carnivorous sundew micropropagated in vitro — sterile, pest-free plantlets.</p>
+          </div>
         </div>
-        <div class="btn-row">
-          <a class="btn" href="contact.html?subject=Research%20collaboration">Request a Consultation</a>
-          <a class="btn-outline" href="services.html">Explore Our Services →</a>
+        <div class="hero-slide" data-slide="1">
+          <img src="assets/img/plant-dorosera_spatulata.jpg" alt="Drosera spatulata — Spoon-leaved sundew" loading="lazy" />
+          <div class="slide-caption container">
+            <p class="common">Spoon-leaved sundew</p>
+            <h2 class="sci">Drosera spatulata</h2>
+            <p class="slide-note">Tissue-cultured stock raised from sterile seed, true to type.</p>
+          </div>
         </div>
+        <div class="hero-slide" data-slide="2">
+          <img src="assets/img/plant-utricularia_graminifolia.jpg" alt="Utricularia graminifolia — Grass-leaved bladderwort" loading="lazy" />
+          <div class="slide-caption container">
+            <p class="common">Grass-leaved bladderwort</p>
+            <h2 class="sci">Utricularia graminifolia</h2>
+            <p class="slide-note">Aquascaping carpet species propagated in flasks, algae-free.</p>
+          </div>
+        </div>
+        <div class="hero-slide" data-slide="3">
+          <img src="assets/img/plant-rotala-rotundifolia-florida.jpg" alt="Rotala rotundifolia — 'Florida' — aquatic stem plant" loading="lazy" />
+          <div class="slide-caption container">
+            <p class="common">'Florida' — aquatic stem plant</p>
+            <h2 class="sci">Rotala rotundifolia</h2>
+            <p class="slide-note">Aquarium stem plant grown emersed then hardened for submerged culture.</p>
+          </div>
+        </div>
+        <div class="hero-slide" data-slide="4">
+          <img src="assets/img/plant-rotala_rotundifolia_red.jpg" alt="Rotala rotundifolia — 'Red' — aquatic stem plant" loading="lazy" />
+          <div class="slide-caption container">
+            <p class="common">'Red' — aquatic stem plant</p>
+            <h2 class="sci">Rotala rotundifolia</h2>
+            <p class="slide-note">High-colour selection maintained under controlled light and nutrients.</p>
+          </div>
+        </div>
+        <div class="hero-slide" data-slide="5">
+          <img src="assets/img/plant-withania_somnifera.jpg" alt="Withania somnifera — Ashwagandha — medicinal" loading="lazy" />
+          <div class="slide-caption container">
+            <p class="common">Ashwagandha — medicinal</p>
+            <h2 class="sci">Withania somnifera</h2>
+            <p class="slide-note">Elite medicinal line multiplied for consistent withanolide content.</p>
+          </div>
+        </div>
+      </div>
+      <button class="slider-nav prev" type="button" aria-label="Previous plant">&#8592;</button>
+      <button class="slider-nav next" type="button" aria-label="Next plant">&#8594;</button>
+      <div class="slider-dots" role="tablist" aria-label="Choose plant">
+        <button type="button" data-goto="0" aria-current="true" aria-label="Show Drosera adelae"></button>
+        <button type="button" data-goto="1" aria-current="false" aria-label="Show Drosera spatulata"></button>
+        <button type="button" data-goto="2" aria-current="false" aria-label="Show Utricularia graminifolia"></button>
+        <button type="button" data-goto="3" aria-current="false" aria-label="Show Rotala rotundifolia"></button>
+        <button type="button" data-goto="4" aria-current="false" aria-label="Show Rotala rotundifolia"></button>
+        <button type="button" data-goto="5" aria-current="false" aria-label="Show Withania somnifera"></button>
       </div>
     </section>
 
@@ -211,7 +264,13 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <span class="footer-logo"><a href="index.html"><img src="assets/img/logo-header.png" alt="FloraCulture Research Lab" /></a></span>
+        <a class="footer-logo" href="index.html">
+          <img src="assets/img/logo-mark.png" alt="" />
+          <span>
+            <span class="bt-name">Flora<em>Culture</em></span><br />
+            <span class="bt-sub">Research Lab</span>
+          </span>
+        </a>
         <p style="margin-top:14px;max-width:320px">Sustainable aquaculture &amp; biotechnology solutions — from research to application.</p>
         <div class="socials">
           <a href="#" aria-label="Instagram" title="Instagram">📷</a>
