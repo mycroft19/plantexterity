@@ -408,3 +408,17 @@ p { margin: 0 0 1rem; }
 @media (max-width: 600px) { .feedback-form .form-row { grid-template-columns: 1fr; gap: 0; } }
 .feedback-form .btn-row { justify-content: center; margin-top: 18px; }
 .form-msg { margin-top: 12px; font-weight: 600; text-align: center; }
+
+/* ---------- Home "where to next" router ---------- */
+.explore-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+@media (max-width: 860px) { .explore-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .explore-grid { grid-template-columns: 1fr; } }
+.explore-card {
+  display: flex; align-items: center; gap: 14px; text-decoration: none;
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 18px 20px; color: var(--ink); transition: transform .12s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.explore-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--gold-light); }
+.explore-card .ico { font-size: 1.6rem; flex: none; }
+.explore-card b { display: block; color: var(--green-dark); font-size: 1.02rem; margin-bottom: 2px; }
+.explore-card span span, .explore-card > span:last-child { font-size: .88rem; color: var(--muted); line-height: 1.45; }
