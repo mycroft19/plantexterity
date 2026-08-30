@@ -33,6 +33,20 @@ cd plantexterity
 grep -rl REPLACE_EMAIL . | xargs sed -i '' 's/REPLACE_EMAIL/lab@example.com/g'   # macOS
 ```
 
+## Run it locally
+
+```bash
+cd plantexterity
+python3 -m http.server 8000
+```
+
+Open <http://localhost:8000>. Ctrl+C to stop.
+
+Serve it over HTTP rather than opening `index.html` directly — over `file://` the Google
+Maps embed is blocked and web fonts load inconsistently, so the page won't match the
+deployed site. If the port is taken, use any other number (`python3 -m http.server 8080`);
+to clear a stuck server, `pkill -f "http.server"`.
+
 ## Contact form
 The form currently has `action="REPLACE_ME"`. Until you set a real endpoint, submitting
 the form opens the visitor's email app (via `mailto:`) so no message is lost.
