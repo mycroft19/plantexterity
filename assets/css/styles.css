@@ -97,12 +97,24 @@ a, button { -webkit-tap-highlight-color: transparent; }
   .nav-links {
     display: none; position: absolute; left: 0; right: 0; top: 100%;
     flex-direction: column; align-items: stretch; gap: 0;
-    background: var(--panel); border-bottom: 1px solid var(--line); padding: 8px 16px 16px;
+    background: var(--deep); border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line); padding: 6px 0 10px;
+    box-shadow: var(--shadow-lg);
   }
   .nav-links.open { display: flex; }
-  .nav-links a { padding: 13px 10px; margin: 0; border-radius: 8px; }
+  /* Full-bleed rows: a chip sized to the word looks stranded in a full-width sheet. */
+  .nav-links li { border-bottom: 1px solid rgba(255,255,255,.045); }
+  .nav-links li:last-child { border-bottom: 0; }
+  .nav-links a {
+    display: block; padding: 14px 22px; margin: 0; border-radius: 0;
+    border-left: 3px solid transparent; font-size: .98rem;
+  }
   .nav-links a::after { display: none; }
-  .nav-links a.active { background: var(--card); color: var(--gold); }
+  .nav-links a:hover { background: rgba(255,255,255,.04); }
+  .nav-links a.active {
+    background: rgba(216,179,87,.09); border-left-color: var(--gold);
+    color: var(--gold); font-weight: 600;
+  }
   .site-header { position: relative; }
 }
 
