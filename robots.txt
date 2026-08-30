@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://floracultureresearchlab.com/sitemap.xml
