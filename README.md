@@ -1,6 +1,6 @@
-# FloraCulture Research Lab — Lab Website
+# FloraCulture Research Lab - Lab Website
 
-Static multi-page website for **FloraCulture Research Lab** — Integrated Plant Production & Aquaculture Lab.
+Static multi-page website for **FloraCulture Research Lab** - Integrated Plant Production & Aquaculture Lab.
 No build step, no framework. Just HTML, CSS, and a small JS file. Open `index.html` to view.
 
 ## Pages
@@ -27,7 +27,7 @@ Search the project for these tokens and replace every occurrence:
 | `REPLACE_ADDRESS` | Physical lab address | footers + `contact.html` |
 | `REPLACE_ME` | Contact form endpoint (see below) | `contact.html` `<form action>` |
 
-Tip — replace across all files at once:
+Tip - replace across all files at once:
 ```bash
 cd plantexterity
 grep -rl REPLACE_EMAIL . | xargs sed -i '' 's/REPLACE_EMAIL/lab@example.com/g'   # macOS
@@ -42,7 +42,7 @@ python3 -m http.server 8000
 
 Open <http://localhost:8000>. Ctrl+C to stop.
 
-Serve it over HTTP rather than opening `index.html` directly — over `file://` the Google
+Serve it over HTTP rather than opening `index.html` directly - over `file://` the Google
 Maps embed is blocked and web fonts load inconsistently, so the page won't match the
 deployed site. If the port is taken, use any other number (`python3 -m http.server 8080`);
 to clear a stuck server, `pkill -f "http.server"`.
@@ -51,7 +51,7 @@ to clear a stuck server, `pkill -f "http.server"`.
 The form currently has `action="REPLACE_ME"`. Until you set a real endpoint, submitting
 the form opens the visitor's email app (via `mailto:`) so no message is lost.
 
-To receive submissions on the site, use a free form relay — no server needed:
+To receive submissions on the site, use a free form relay - no server needed:
 - **Formspree:** create a form at formspree.io, then set
   `action="https://formspree.io/f/yourID"` and `method="POST"` in `contact.html`.
 - **Netlify Forms:** if hosting on Netlify, add `data-netlify="true"` to the `<form>` and
@@ -70,11 +70,11 @@ Put image files in `assets/img/`.
 
 ## Home-page placeholder content
 The redesigned home page (modeled on a modern lab site) has placeholder content to update:
-- **Stats counters** (`data-to` values in `index.html`) — set real years/projects/trainees/clients.
-- **Testimonials carousel** — replace the placeholder quotes with real ones.
-- **FAQ** — edit questions/answers as needed.
-- **Social links** — footer social icons (`class="socials"`) currently point to `#`; set your real Instagram/Facebook/YouTube/LinkedIn URLs (in every page footer).
-- **Newsletter form** — currently inert (`onsubmit="return false"`); wire to your mailing-list provider if wanted.
+- **Stats counters** (`data-to` values in `index.html`) - set real years/projects/trainees/clients.
+- **Testimonials carousel** - replace the placeholder quotes with real ones.
+- **FAQ** - edit questions/answers as needed.
+- **Social links** - footer social icons (`class="socials"`) currently point to `#`; set your real Instagram/Facebook/YouTube/LinkedIn URLs (in every page footer).
+- **Newsletter form** - currently inert (`onsubmit="return false"`); wire to your mailing-list provider if wanted.
 
 ## Changing colors
 All theme colors are CSS variables at the top of `assets/css/styles.css` (`:root { … }`).

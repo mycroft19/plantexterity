@@ -1,7 +1,7 @@
-/* FloraCulture Research Lab — shared stylesheet.
-   Theme driven by CSS custom properties below — change colors in one place. */
+/* FloraCulture Research Lab - shared stylesheet.
+   Theme driven by CSS custom properties below - change colors in one place. */
 
-/* Design tokens live in theme.css — loaded before this file. */
+/* Design tokens live in theme.css - loaded before this file. */
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -72,7 +72,7 @@ p { margin: 0 0 1rem; }
   border-radius: 4px; background: none;
   transition: color .18s ease;
 }
-/* Hairline indicator that grows from the centre — no filled block. */
+/* Hairline indicator that grows from the centre - no filled block. */
 .nav-links a::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: 1px; height: 2px;
   border-radius: 2px; background: var(--gold);
@@ -329,7 +329,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
   border-radius: 24px; padding: 56px; text-align: center; }
 .cta-band h2 { color: var(--ink); }
 .cta-band p { color: var(--muted); max-width: 560px; margin: 0 auto 24px; font-size: 1.08rem; }
-/* On the band's own gradient the neutral outline button disappears — give it the gold fill. */
+/* On the band's own gradient the neutral outline button disappears - give it the gold fill. */
 .cta-band .btn-outline {
   background: var(--gold); color: var(--on-gold); border-color: var(--gold); font-weight: 600;
 }

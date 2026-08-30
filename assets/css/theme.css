@@ -1,5 +1,5 @@
 /* ============================================================
-   FloraCulture Research Lab — theme palette
+   FloraCulture Research Lab - theme palette
    ------------------------------------------------------------
    Every colour, radius and typeface the site uses is declared
    here. styles.css contains structure only and reads these
@@ -13,7 +13,7 @@
    ============================================================ */
 
 :root {
-  /* ---- Brand constants (from the logo — never change per theme) ---- */
+  /* ---- Brand constants (from the logo - never change per theme) ---- */
   --brand-green: #1b5e3f;
   --brand-gold: #b8912f;
 
