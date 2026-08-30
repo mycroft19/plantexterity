@@ -1,0 +1,131 @@
+/* ============================================================
+   FloraCulture Research Lab — theme palette
+   ------------------------------------------------------------
+   Every colour, radius and typeface the site uses is declared
+   here. styles.css contains structure only and reads these
+   variables, so a whole re-skin is a change to this file alone.
+
+   ACTIVE THEME: Deep Canopy.
+
+   To switch themes, add the theme's attribute to <html>, e.g.
+       <html lang="en" data-theme="herbarium">
+   Leaving it off gives you Deep Canopy.
+   ============================================================ */
+
+:root {
+  /* ---- Brand constants (from the logo — never change per theme) ---- */
+  --brand-green: #1b5e3f;
+  --brand-gold: #b8912f;
+
+  /* ---- Typography ---- */
+  --display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+
+  /* ---- Geometry ---- */
+  --radius: 14px;
+  --radius-pill: 999px;
+  --maxw: 1180px;
+
+  /* ============ Deep Canopy (default) ============
+     Dark forest ground. Photographs glow against it and the
+     gold reads as metal rather than mustard. */
+
+  /* Surfaces, back to front */
+  --ground: #0d2a1e;     /* page background          */
+  --panel: #123527;      /* alternating sections     */
+  --card: #143b2b;       /* cards, inputs, tiles     */
+  --card-hi: #1a4735;    /* hover / emphasis         */
+  --deep: #081a13;       /* footer, feature bands    */
+  --line: #1d4634;       /* borders and rules        */
+
+  /* Text */
+  --ink: #eef5ef;        /* headings and body        */
+  --muted: #9dc0aa;      /* secondary text           */
+  --nav: #c6dccd;        /* nav links at rest        */
+
+  /* Accents */
+  --gold: #d8b357;       /* primary accent + buttons */
+  --gold-light: #e5c87f; /* hover                    */
+  --gold-deep: #b8912f;  /* on light surfaces        */
+  --on-gold: #0d2a1e;    /* text on a gold fill      */
+  --green: #1b5e3f;
+  --green-dark: #0a2118;
+  --teal: #17a07f;
+  --teal-dark: #0f6b4f;
+  --lime: #8fbf9e;
+  --cream: #fbf7ee;      /* logo plaque only         */
+
+  /* Aliases kept so older rules keep resolving */
+  --sand: var(--ground);
+  --accent-soft: var(--panel);
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, .28);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, .42);
+
+  /* Overlay used on photo captions and hero slides */
+  --overlay-strong: rgba(8, 26, 19, .88);
+  --overlay-soft: rgba(8, 26, 19, .28);
+}
+
+/* ============ Cream & Gold (the original light theme) ============ */
+:root[data-theme="cream"] {
+  --ground: #f8f7f1;
+  --panel: #eef4ea;
+  --card: #ffffff;
+  --card-hi: #e9f3ec;
+  --deep: #0a2118;
+  --line: #e4ede7;
+  --ink: #16221c;
+  --muted: #586b60;
+  --nav: #16221c;
+  --gold: #b8912f;
+  --gold-light: #d8b357;
+  --gold-deep: #96741f;
+  --on-gold: #ffffff;
+  --shadow: 0 10px 30px rgba(16, 59, 41, .08);
+  --shadow-lg: 0 24px 60px rgba(16, 59, 41, .14);
+  --display: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ============ Herbarium (ivory botanical plate) ============ */
+:root[data-theme="herbarium"] {
+  --ground: #f3efe4;
+  --panel: #ede8d9;
+  --card: #f8f5ec;
+  --card-hi: #efe9d8;
+  --deep: #24301f;
+  --line: #ddd3ba;
+  --ink: #24301f;
+  --muted: #7d8b6a;
+  --nav: #4a5842;
+  --gold: #a8862c;
+  --gold-light: #c2a047;
+  --gold-deep: #8a6d1f;
+  --on-gold: #f8f5ec;
+  --shadow: 0 8px 24px rgba(36, 48, 31, .09);
+  --shadow-lg: 0 20px 50px rgba(36, 48, 31, .16);
+  --display: "Newsreader", Georgia, serif;
+  --radius: 4px;
+}
+
+/* ============ Clean Lab (white, technical) ============ */
+:root[data-theme="lab"] {
+  --ground: #ffffff;
+  --panel: #f4f7f5;
+  --card: #ffffff;
+  --card-hi: #eef3f0;
+  --deep: #0f2a1e;
+  --line: #e8ece9;
+  --ink: #0f2a1e;
+  --muted: #6b7a72;
+  --nav: #0f2a1e;
+  --gold: #0f6b4f;
+  --gold-light: #17a07f;
+  --gold-deep: #0b5340;
+  --on-gold: #ffffff;
+  --shadow: 0 6px 18px rgba(15, 42, 30, .07);
+  --shadow-lg: 0 18px 44px rgba(15, 42, 30, .12);
+  --display: "IBM Plex Sans", -apple-system, sans-serif;
+  --radius: 4px;
+}

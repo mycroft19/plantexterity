@@ -1,2 +1,9 @@
-# Source images dropped in the repo root — optimized copies live in assets/img/
-/*.jpeg
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Python scratch
+__pycache__/
