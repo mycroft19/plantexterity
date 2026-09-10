@@ -592,3 +592,9 @@ ul.tick li::before {
 .papers .authors { margin: 0 0 2px; font-size: .9rem; color: var(--ink); }
 .papers .cite { margin: 0 0 10px; font-size: .86rem; color: var(--muted); }
 .papers .arrow-link { font-size: .86rem; }
+
+/* In-stock marker on product tables and live-stock lists. */
+.instock { display:inline-block; margin-left:8px; padding:2px 8px; vertical-align:middle;
+  font-size:11px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+  color:var(--green); background:rgba(27,94,63,.10); border:1px solid rgba(27,94,63,.25);
+  border-radius:var(--radius-pill); }
